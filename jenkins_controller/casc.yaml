@@ -2,7 +2,7 @@ jenkins:
   numExecutors: 0
   securityRealm:
     local:
-      allowsSignup: true
+      allowsSignup: false
       users:
         - id: "panda"
           password: "panda"
