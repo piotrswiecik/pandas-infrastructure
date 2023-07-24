@@ -11,4 +11,16 @@ jenkins:
       permissions:
         - "USER:Overall/Administer:panda"
 
+credentials:
+  system:
+    domainCredentials:
+      - credentials:
+        - basicSSHUserPrivateKey:
+            scope: SYSTEM
+            id: jenkins_agent
+            username: jenkins
+            description: "Jenkins agent SSH key pair"
+            privateKeySource:
+              directEntry:
+                privateKey: "${file:/home/panda/pandas-infrastructure/jenkins_controller/jenkins_agent}"
 
