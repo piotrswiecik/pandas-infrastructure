@@ -24,3 +24,22 @@ credentials:
               directEntry:
                 privateKey: "${file:/home/panda/pandas-infrastructure/jenkins_controller/jenkins_agent}"
 
+tool:
+  sonarRunnerInstallation:
+    installations:
+      - name: "SonarQube"
+        properties:
+          - installSource:
+              installers:
+                - sonarRunnerInstaller:
+                    id: "4.7.0.2747"
+
+unclassified:
+  sonarglobalconfiguration:
+    buildWrapperEnabled: true
+    installations:
+      - name: "panda-sonar"
+        serverUrl: "http://192.168.56.200:9000"
+        triggers:
+          skipScmCause: false
+          skipUpstreamCause: false
