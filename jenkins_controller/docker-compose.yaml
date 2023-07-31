@@ -9,5 +9,5 @@ services:
       - "8880:8080"
       - "50000:50000"
     volumes:
-      # - "/home/panda/jenkins:/var/jenkins_home"
+      - /home/panda/jenkins:/var/jenkins_home
       - /home/panda/pandas-infrastructure/jenkins_controller/casc.yaml:/usr/share/jenkins/ref/casc.yaml
