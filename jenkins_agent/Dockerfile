@@ -5,6 +5,7 @@ RUN apt update && \
 
 RUN curl -fsSL https://get.docker.com/ | sh
 
+RUN groupadd -g 997 docker
 RUN usermod -aG docker jenkins
 
 RUN curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip" && unzip awscliv2.zip && ./aws/install
