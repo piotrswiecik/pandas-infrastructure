@@ -27,6 +27,11 @@ credentials:
   system:
     domainCredentials:
       - credentials:
+        - usernamePassword:
+            id: "artifactory"
+            username: "admin"
+            password: "password"
+            scope: GLOBAL
         - basicSSHUserPrivateKey:
             scope: SYSTEM
             id: jenkins_agent
